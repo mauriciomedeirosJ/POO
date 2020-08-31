@@ -7,6 +7,7 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Calendar;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,7 +41,17 @@ public class GreetingServlet extends HttpServlet {
             out.println("<title>Servlet GreetingServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet GreetingServlet at " + request.getContextPath() + "</h1>");
+            int h= Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
+            if(h<12){
+                out.println("<h1>Bom dia</h1>");
+            }else{
+            if(h>=18){
+                out.println("<h1>Boa Noite</h1>");
+            }else{
+                out.println("<h1>Boa Tarde</h1>");
+            }
+            
+            }
             out.println("</body>");
             out.println("</html>");
         }

@@ -40,7 +40,7 @@ public class MauricioServlet extends HttpServlet {
             out.println("<title>Servlet MauricioServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet MauricioServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Mauricio Medeiros de Jesus</h1>");
             out.println("</body>");
             out.println("</html>");
         }

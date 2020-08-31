@@ -40,7 +40,7 @@ public class ServerDateServlet extends HttpServlet {
             out.println("<title>Servlet DateServerServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet DateServerServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Data: " + new java.util.Date() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

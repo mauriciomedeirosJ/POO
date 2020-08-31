@@ -40,7 +40,13 @@ public class SubtractionServlet extends HttpServlet {
             out.println("<title>Servlet SubtractionServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet SubtractionServlet at " + request.getContextPath() + "</h1>");
+            try{
+                double n0= Double.parseDouble(request.getParameter("n0"));
+                double n2= Double.parseDouble(request.getParameter("n2"));
+                out.println("<h3> Subtração de "+n0+" - " +n2+" = " +(n0-n2)+"</h3>");
+            }catch(Exception ex){
+                 out.println("<h3>Erro ao tentar ler os parámetros</h3>");
+            }
             out.println("</body>");
             out.println("</html>");
         }
